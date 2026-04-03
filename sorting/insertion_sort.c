@@ -1,14 +1,21 @@
 #include <stdio.h>
 
+#define SWAP(a, b)                                                             \
+    do {                                                                       \
+        int t = (a);                                                           \
+        (a) = (b);                                                             \
+        (b) = t;                                                               \
+    } while (0)
+
 void insertion_sort(int arr[], int n) {
+    int i, j;
+
     for (int i = 1; i < n; i++) {
-        int key = arr[i];
-        int j = i - 1;
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
+        j = i;
+        while (j < 0 && arr[j] < arr[j - 1]) {
+            SWAP(arr[j - 1], arr[j]);
             j = j - 1;
         }
-        arr[j + 1] = key;
     }
 }
 int main() {
