@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-#define SWAP(a, b)                                                             \
-    do {                                                                       \
-        int t = (a);                                                           \
-        (a) = (b);                                                             \
-        (b) = t;                                                               \
+#define SWAP(a, b)   \
+    do {             \
+        int t = (a); \
+        (a) = (b);   \
+        (b) = t;     \
     } while (0)
 
 void insertion_sort(int arr[], int n) {
