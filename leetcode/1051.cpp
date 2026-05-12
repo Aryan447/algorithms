@@ -1,12 +1,11 @@
 #include <algorithm>
 #include <iostream>
-#include <string>
 #include <vector>
 using namespace std;
 
 class Solution {
-  public:
-    int heightChecker(vector<int> &heights) {
+   public:
+    int heightChecker(vector<int>& heights) {
         int ans = 0;
         vector<int> expected = heights;
         sort(expected.begin(), expected.end());
@@ -28,4 +27,3 @@ int main() {
 
     cout << s1.heightChecker(nums) << endl;
 }
-
